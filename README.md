@@ -5,8 +5,8 @@ This template is a starting point for researchers who want to publish the code t
 There are essentially three ways to publish your code so it can be reused (and potentially cited):
 
 1. Publish the code as is
-2. Publish a Python package
-3. Publish as peer-reviewed software
+2. Publish a Python package to PyPI
+3. Publish as peer-reviewed software (to [pyOpenSci](https://www.pyopensci.org) or the [Journal of Open Source Software](https://joss.theoj.org))
 
 If you hope to do either (2) or (3), this template provides some guidance on how to structure your code for package deployment and for peer review. If you only plan to do (1), this can still be a useful template to get started with.
 
@@ -22,10 +22,14 @@ In order to maintain clean virtual environments, we recommend managing your depe
 ## Publishing Your Code
 * https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content
 * https://github.com/kennethreitz/setup.py?tab=readme-ov-file
+* https://github.com/navdeep-G/setup.py
+* https://github.com/navdeep-G/samplemod?tab=readme-ov-file
 * https://figshare.com
 * https://joss.theoj.org
 * https://www.pyopensci.org
-
+* https://github.com/audreyfeldroy/cookiecutter-pypackage
+* https://the-hitchhikers-guide-to-packaging.readthedocs.io/en/latest/creation.html
+* https://docs.python-guide.org/writing/structure/
 
 ### Prepare for Publishing
 
