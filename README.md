@@ -18,6 +18,25 @@ If you hope to do either (2) or (3), this template provides some guidance on how
 
 In order to maintain clean virtual environments, we recommend managing your dependencies using [Poetry](https://python-poetry.org). This will make it so you only need one tool to cover the following: managing dependencies, creating local environments, and publishing your package to PyPI.
 
+#### Install Poetry 
+
+Simple installation with `pipx`
+```
+pipx install poetry
+```
+
+See detailed instructions [here](https://python-poetry.org/docs/#installation).
+
+#### Configure in-project virtual environments
+```
+poetry config virtualenvs.in-project true
+```
+
+#### Run install to create virtual environment
+```
+poetry install
+```
+
 
 ## Publishing Your Code
 * https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content
