@@ -15,6 +15,7 @@ If you hope to do either (2) or (3), this template provides some guidance on how
 ### Fork this repo
 Update the following content:
 * Update year and name in LICENSE
+* Review and update CODE_OF_CONDUCT as desired. This is prefilled using the language provided by the [Contributor Covenant](https://www.contributor-covenant.org/version/2/1/code_of_conduct/) as recommended by the [pyOpenSci documentation](https://www.pyopensci.org/python-package-guide/documentation/repository-files/code-of-conduct-file.html#why-you-need-a-code-of-conduct).
 
 ## Publishing Your Code
 * https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content
