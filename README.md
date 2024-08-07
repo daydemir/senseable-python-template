@@ -17,5 +17,8 @@ Update the following content:
 * Update year and name in LICENSE
 
 ## Publishing Your Code
-
+* https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content
 * https://github.com/kennethreitz/setup.py?tab=readme-ov-file
+* https://figshare.com
+* https://joss.theoj.org
+* https://www.pyopensci.org
