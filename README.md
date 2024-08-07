@@ -13,6 +13,8 @@ If you hope to do either (2) or (3), this template provides some guidance on how
 ## Getting Started
 
 ### Fork this repo
+Update the following content:
+* Update year and name in LICENSE
 
 ## Publishing Your Code
 
