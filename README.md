@@ -1,4 +1,4 @@
-# Senseable Template
+# Senseable Python Template
 
 This template is a starting point for researchers who want to publish the code they have written for their research. 
 
