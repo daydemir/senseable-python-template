@@ -39,6 +39,7 @@ poetry install
 
 
 ## Publishing Your Code
+* https://github.com/microsoft/python-package-template/blob/main/README.md
 * https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content
 * https://github.com/kennethreitz/setup.py?tab=readme-ov-file
 * https://github.com/navdeep-G/setup.py
