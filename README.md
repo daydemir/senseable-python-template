@@ -10,7 +10,13 @@ It is recommended that you read about [the opinions reflected in the template](h
 
 **To get started with the Senseable Python Template, [visit the homepage](https://daydemir.github.io/senseable-python-template/).**
 
+## Possible Future Improvements
+- Add instructions for how to access the SCL BIZON Workstation and NAS
+- Provide some example usage or boilerplate for processing common types of imagery (possibly using libraries like [Zen SVI](https://zensvi.readthedocs.io/en/latest/))
+- Add offboarding instructions for researchers who are leaving the lab
+
 
 ## SCL Repositories
 
-[B++, Titus Venverloo](https://github.com/Tvenver/Bplusplus) (see branch `package`)
+- [B++, Titus Venverloo](https://github.com/Tvenver/Bplusplus) (see branch `package`)
+- [Treepedia](https://github.com/mittrees/Treepedia_Public)
