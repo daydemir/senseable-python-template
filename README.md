@@ -111,7 +111,7 @@ Begin filling out the template. These can all be changed later.
   - If you do not currently use one of those providers but plan to do so eventually, you can select it now and use the default values for the credentials. This will create the convenient scripts in the `Makefile`, and later when you set up the cloud storage you can modify the details in the `Makefile` to reflect the relevant credentials (bucket name, etc).
   - Eventually, we will recommend using the SCL Network Attached Storage (NAS) that is hosted in Cambridge for data storage. See the section **Using the SCL Network Attached Storage (NAS)** below for instructions on how to set up the NAS for data storage. If you will use the SCL NAS, select `none` for `dataset_storage`.
 
-For the remaining choices, refer to the setups below.
+For the remaining choices, refer to the chosen setup flow below.
 ## *Standard* Setup
 ### Complete template setup
 - Select the `environment_manager` of your choice. Select `none` if you wish to set up an environment manager that is not listed.
@@ -120,6 +120,14 @@ For the remaining choices, refer to the setups below.
 - Choose `open_source_license`. `MIT` is recommended if the repository will be public.
 - Choose `docs`. If you would prefer to use [Read the Docs](https://about.readthedocs.com) instead, you can select `none` and set that up independently.
 - Choose `code_scaffold`. It is recommended to select `yes` to include some useful boilerplate code. If you are an experienced Python developer, you may prefer to avoid the prebuilt boilerplate and select `no`.
+
+### Create a Python virtual environment
+If you used the *Standard* setup, you can use the following command to create a new environment using a recipe provided by the template in the Makefile:
+```shell
+make create_environment
+```
+You will then need to activate that environment using the environment manager you've chosen. See [Create a Python virtual environment](https://cookiecutter-data-science.drivendata.org/using-the-template/#create-a-python-virtual-environment) for more information.
+
 ## *Poetic* Setup
 ### Complete template setup
 - For `environment_manager`, select `none`.
@@ -128,7 +136,6 @@ For the remaining choices, refer to the setups below.
 - Choose `open_source_license`. `MIT` is recommended if the repository will be public.
 - Choose `docs`. If you would prefer to use [Read the Docs](https://about.readthedocs.com) instead, you can select `none` and set that up independently.
 - Choose `code_scaffold`. It is recommended to select `yes` to include some useful boilerplate code. If you are an experienced Python developer, you may prefer to avoid the prebuilt boilerplate and select `no`.
-
 
 ### Set up Poetry
 In the *Poetic* setup flow, we will manage dependencies using [Poetry](https://python-poetry.org). This will make it so you only need one tool to cover the following: manage dependencies, create local environments, and publish your package to PyPI.
@@ -200,10 +207,8 @@ gh repo create
 
 Your project is now ready to go!
 
-# Best Practices
+# Using the template
 See the below sections for more information and best practices.
-## Make
-As part of this template, a `Makefile` is created with some initial scripts that can be used to simplify set up and reuse of your repo.
 
 ## Version Control
 
@@ -215,9 +220,39 @@ It is best practice to commit and push your changes to the remote repository fre
 
 If you would like a crash course on how to use **git**, you may try [Learn Git Branching](https://learngitbranching.js.org).
 
+## Make
+As part of this template, a `Makefile` is created with some initial scripts, called "recipes", that can be used to simplify set up and reuse of your repository.
+
+See [Make as a task runner](https://cookiecutter-data-science.drivendata.org/using-the-template/#make-as-a-task-runner) for more information.
+
+## Virtual Environments
+
+During the setup, you will have created a virtual environment where your specified version of python and dependencies will be housed to run your python code. The use of virtual environments keeps dependencies and python versions from clashing between different projects, and makes it easier to quickly run someone else's project when needed.
+
+In your code editor, be sure to select the local virtual environment you created. It will likely be in a folder called `.venv` located within your project folder.
+
 ## Structuring your code
+
+It is recommended that you put the "logic" of your workflow into the module folder created by the template, and reference that module in any scripts or notebooks as needed.
+
+This makes it easier to...
+1. Share the core components of your code and eventually publish it as a package
+2. Separate different types of code conceptually
+3. Have someone else come in and review your code
+4. Publish your code as a package if so desired
+
+The module folder will be the one with the name you chose at setup and has the `__init__.py` file inside it. 
+
+See [Refactoring code into shared modules](https://cookiecutter-data-science.drivendata.org/using-the-template/#refactoring-code-into-shared-modules) for more information and how to turn on `autoreload` so your Jupyter Notebooks always use the up-to-date code from your module.
+
 #### Jupyter Notebooks
 
+It is recommended that Jupyter Notebooks be used as a way to explore and visualize the data, and not where the actual data manipulation and "logic" happens. It is reasonable to experiment with more functional changes in your notebooks, but it is recommended that the data manipulation code eventually be moved to the module.
+
+One way to think about this is: could someone else ignore your notebooks and use only your module code to reproduce your results? If not, then it is useful to refactor your code to make that possible. If you plan to publish your module as a package, this will be necessary.
+
+See [Open a notebook](https://cookiecutter-data-science.drivendata.org/using-the-template/#open-a-notebook) for more information and guidance on a useful notebook naming convention.
+ 
 ## Dependency Management
 If the *Standard* setup was used, you can use the dependency manager of your choice (likely `pipx` or `conda`), and the file of your choice as well (likely `requirements.txt`).
 If the *Poetic* setup was used, you can add packages using the following command in the command line:
@@ -233,7 +268,7 @@ If a package is being added to the whole project, it should be one that is requi
 
 If a dependency is only used for some extra work that you are doing with your core code or for extra tooling, and is not a dependency that your core code directly uses, then you can add that package to your development environment. This makes it so when you are sharing your code or publishing a package, it is clear which packages are required to run your code and extraneous dependencies are not unnecessarily bundled in. Some standard examples of development environment dependencies include `ipykernel` and `notebooks` for Jupyter Notebooks, since notebooks would not likely be considered part of a core module to be reused by others.
 
-**If you do not expect to publish a Python package or share your code with others, this distinction is not very important and you can add all dependencies directly to the whole project using the steps above.**
+*If you do not expect to publish a Python package or share your code with others, this distinction is not very important and you can add all dependencies directly to the whole project using the steps above.*
 
 #### Development dependencies with requirements.txt
 If you use a `requirements.txt` file for your dependencies, you can create a second `requirements-dev.txt` file to manage development environment dependencies. A quick guide on how to do this can be found [here](https://www.packetcoders.io/pip-trick-for-splitting-dev-requirements/).
@@ -263,6 +298,9 @@ For this reason, this template uses the following structure within the `data` fo
 It is preferred that the datasets be stored on the Senseable NAS, or on some form of cloud storage (hence the `dataset_storage` option at initial set up).
 The `data` folder is included in the `.gitignore` file by default, so no files in the data folder will be synced to GitHub. This is generally good practice in order to keep large data files off of GitHub. GitHub will reject files over 100MB.
 If you think it is important to include the data files in GitHub, you can modify the `.gitignore` as needed. If your files are larger than a few MB, it is recommended to use [git-lfs](https://git-lfs.com) to keep your git history lean and repo fetching fast. Be mindful that storing the datasets on a public GitHub repository will make the datasets themselves public as well.
+
+See [Add your data](https://cookiecutter-data-science.drivendata.org/using-the-template/#add-your-data) for more information on how to use the data syncing recipes provided with the `Makefile`.
+
 ### Using the SCL Network Attached Storage (NAS)
 [Pending instructions on connecting your data to the Senseable NAS]
 
@@ -303,24 +341,19 @@ There are essentially three ways to publish your code so it can be reused (and p
 
 ## Building a Python package
 
-These instructions will be useful if you intend to release your code as a Python package on PyPI.
+These instructions will be useful if you intend to release your moodule as a Python package on PyPI.
 
 ### How to decide
 
-Would your code be useful to other researchers or developers? Releasing the reusable elements of your code as a package on PyPI makes it easy for others to use, and for you (or others) to to improve the code over time. See more on python packages [here](https://www.pyopensci.org/python-package-guide/tutorials/intro.html).
+Would this module be useful to other researchers or developers? Releasing the reusable elements of your code as a package on PyPI makes it easy for others to use, and to have a formal way of releasing improvements over time. See more on python packages [here](https://www.pyopensci.org/python-package-guide/tutorials/intro.html).
 
 If you add your repo to Zenodo, then you will have a unique DOI (separate from the DOI of any papers you've published) that can be cited by others when they use your library.
 
 If you would like to have your package peer-reviewed and its visibility increased, you can consider submitting to [pyOpenSci](https://www.pyopensci.org) or the [Journal of Open Source Software](https://joss.theoj.org). pyOpenSci is a peer-review process that increases the visibility among the scientific community. The Journal of Open Source Software requires that the software be non-trivial by checking number of lines of code and the amount of time it took to write the software. More details on the submission requirements for the JOSS [here](https://joss.readthedocs.io/en/latest/submitting.html).
 
-### Code structure for packaging
-
-
- 
-
-
 ### Publishing the package
-If you are ready to publish your package, make sure that your git working tree is clean by running `git status` and ensuring that you see that there is nothing to commit.
+
+If you are ready to publish your module as a Python package, make sure that your git working tree is clean by running `git status` and ensuring that you see that there is nothing to commit.
 
 #### Decide on a version
 Every time you want to update the package, you'll need to decide what the version should be of the next package update. It is recommended that version updates adhere to semantic versioning standards. [More on semantic versioning available here](https://devhints.io/semver)
