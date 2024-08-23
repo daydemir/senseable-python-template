@@ -44,6 +44,12 @@ It is recommended that Jupyter Notebooks be used as a way to explore and visuali
 
 One way to think about this is: could someone else ignore your notebooks and use only your module code to reproduce your results? If not, then it is useful to refactor your code to make that possible. If you plan to publish your module as a package, this will be necessary.
 
+In order to access your module code instantly without having to reload your notebook, add a cell to the top of your notebook containing the following code.
+```python
+%load_ext autoreload
+%autoreload 2
+```
+
 See [Open a notebook](https://cookiecutter-data-science.drivendata.org/using-the-template/#open-a-notebook) for more information and guidance on a useful notebook naming convention.
  
 ## Dependency Management
