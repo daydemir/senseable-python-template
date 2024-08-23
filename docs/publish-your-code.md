@@ -9,7 +9,7 @@ There are essentially three ways to publish your code so it can be reused (and p
 
 
 
-## Methods of publishing code
+## Code Publishing and Archiving Tools
 
 |Tool   |Description   |Supports   |
 |---|---|---|
