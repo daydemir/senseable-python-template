@@ -44,6 +44,18 @@ Add a CHANGELOG, and update it with new releases. More details on good practices
 
 Examples of the above can be found in this repository.
 
+#### Publishing with Flit
+
+If you used the *Standard* setup, you will be ready to publish using [Flit](https://flit.pypa.io/en/stable/).
+
+Once Flit is installed, you should be ready to build and publish your package code. 
+
+```Shell
+flit build
+flit publish
+```
+
+Flit will use the `version` set in your `pyproject.toml` as the version for the package deployment.
 
 #### Publishing with Poetry
 If you are using Poetry `poetry` handles incrementing the versions for you, you just need to decide if the update is a `patch`, a `minor` update, or a `major` update. Any update that would break for existing users of the package is always considered `major`.
