@@ -3,9 +3,10 @@
 ## Prerequisites
 
 In order to get started, you'll need the following:
-- A basic understanding of **git** and a GitHub account.
-- A command line interface to run commands (often Terminal on macOS and Linux, and Command Prompt or PowerShell on Windows)
-- An installation of **pipx** or **pip**
+
+1. A basic understanding of **git** and a GitHub account.
+2. A command line interface to run commands (often Terminal on macOS and Linux, and Command Prompt or PowerShell on Windows).
+3. An installation of **pipx** or **pip**.
 
 ## Setup
 
