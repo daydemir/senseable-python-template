@@ -6,3 +6,4 @@ nav:
   - Publish Your Code: publish-your-code.md
 
 theme: readthedocs
+repo_url: https://github.com/daydemir/senseable-python-template/

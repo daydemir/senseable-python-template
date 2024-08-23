@@ -1,6 +1,8 @@
 # A Senseable Python Template
 
-In order to get started with a new Python project at the MIT Senseable City Lab, it is strongly recommended that [cookiecutter-data-science](https://cookiecutter-data-science.drivendata.org) is used to create the skeleton for your project.
+[View on GitHub](https://github.com/daydemir/senseable-python-template)
+
+In order to get started with a new Python project at the MIT Senseable City Lab, it is strongly recommended that the [cookiecutter-data-science](https://cookiecutter-data-science.drivendata.org) template is used to create the skeleton for your project.
 
 [Cookiecutter](https://cookiecutter.readthedocs.io/en/stable/README.html) is a tool to quickly build out your project structure using a command line utility. There are [many different cookiecutter templates](https://github.com/search?q=cookiecutter&amp%3Btype=Repositories&type=repositories&s=stars&o=desc) that can be used for different project setups with different focuses and strengths. We specifically recommend the template *cookiecutter-data-science* because it is widely adopted for use in research environments and presents an easy-to-share and flexible starting off point. As stated in their documentation:
 > *A logical, flexible, and reasonably standardized project structure for doing and sharing data science work.*
