@@ -91,16 +91,39 @@ Simple installation with `pipx`
 pipx install poetry
 ```
 See detailed instructions [here](https://python-poetry.org/docs/#installation).
-#### Select Python version
-Use the Python version specified in the template setup.
-```shell
-python env use 3.12
+
+#### Initialize Poetry
+The *cookiecutter-data-science* template created a `pyproject.toml` for us already, but we will want to delete a couple sections from that before initiaalizing **Poetry**.
+
+First, delete the sections within the `pyproject.toml` for `[project]` and `[build-system]`. They will probably look something like this:
+```toml
+[project]
+name = "your-project-name"
+version = "0.0.1"
+description = "the description for your project"
+authors = [
+  { name = "Deniz Aydemir" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License"
+]
+requires-python = "~=3.12"
+
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
 ```
-or specify the path directly
+
+Now you can initialize using **Poetry**. From within the newly created project folder:
 ```shell
-poetry env use /path/to/preferred/python/version
+cd newly-created-project folder 
+poetry init
 ```
-You can see the path to your Python version by running `which python3.12` on macOS / Linux, or `py -0p` on Windows.
+You will be guided through set up options, and you should chose the same project name you chose during the original set up.
+
 #### Configure in-project virtual environments
 ```shell
 poetry config virtualenvs.in-project true
@@ -110,6 +133,7 @@ poetry config virtualenvs.in-project true
 poetry install
 ```
 This creates a virtual environment that stored in the project folder at `/.venv`. This folder is hidden to git thanks to the `.gitignore` file, so your local environment does not take up storage in GitHub.
+
 This makes it so if someone else wants to run your code, they can clone or download your repository from GitHub, and run `poetry install` themselves to have a copy of the virtual environment you are using.
 
 #### Delete the requirements.txt
