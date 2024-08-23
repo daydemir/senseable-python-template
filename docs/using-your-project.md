@@ -1,4 +1,4 @@
-# Using the template
+# Use Your Project
 See the below sections for more information and best practices.
 
 ## Version Control
