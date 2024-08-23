@@ -136,6 +136,17 @@ This creates a virtual environment that stored in the project folder at `/.venv`
 
 This makes it so if someone else wants to run your code, they can clone or download your repository from GitHub, and run `poetry install` themselves to have a copy of the virtual environment you are using.
 
+Let's add the helpers that come with the template to the development environment. More information on this is available in [Working On Your Project](using-your-project.md).
+```shell
+poetry add black flake8 isort --group dev
+```
+
+If you chose `yes` for the `code_scaffolding` option, then run the following command to add the packages included in the boilerplate code to the whole project.
+
+```shell
+poetry add python-dotenv loguru typer tqdm
+```
+
 #### Delete the requirements.txt
 
 In order to avoid confusion, it is recommended that you delete the `requirements.txt` file as it will remain out of date.
@@ -157,6 +168,20 @@ poetry export -f requirements.txt --output requirements.txt
 # If you want to include development dependencies as well
 poetry export -f requirements.txt --output requirements.txt --dev
 ```
+
+#### Adjust Makefile
+In fact, in order to get some of our `Makefile` recipes working again, we will add those above lines to the `requirements` recipe. So now the `requirements` recipe in your `Makefile` should look like the following:
+```make
+## Install Python Dependencies
+.PHONY: requirements
+requirements:
+	poetry export -f requirements.txt --output requirements.txt
+	poetry export -f requirements.txt --output requirements.txt --dev
+	$(PYTHON_INTERPRETER) -m pip install -U pip
+	$(PYTHON_INTERPRETER) -m pip install -r requirements.txt
+```
+It is important to not that with this change `make requirements` will create a `requirements.txt` based on your **Poetry** dependencies (both regular and development) based on the `pyproject.toml`, and install those dependencies using **pip**. However, if you are generally using **Poetry** to manage your dependencies, `make requirements` should not be used to install dependencies for development purposes. Instead, the standard `poetry install` should be used.
+
 ## Connect to GitHub
 Whichever setup flow you chose, your final step will be to connect your local folder to a new repo on GitHub.
 
