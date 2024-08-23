@@ -3,9 +3,9 @@
 ## Prerequisites
 
 In order to get started, you'll need the following:
-1. A basic understanding of **git** and a GitHub account.
-2. A command line interface to run commands (often Terminal on macOS and Linux, and Command Prompt or PowerShell on Windows)
-3. An installation of **pipx** or **pip**
+- A basic understanding of **git** and a GitHub account.
+- A command line interface to run commands (often Terminal on macOS and Linux, and Command Prompt or PowerShell on Windows)
+- An installation of **pipx** or **pip**
 
 ## Setup
 
@@ -114,7 +114,7 @@ In order to avoid confusion, it is recommended that you delete the `requirements
 ### pyproject.toml
 It will be useful to familiarize yourself with the `pyproject.toml` file. This file is the current best practice method for defining project parameters and dependencies. Poetry will populate and use this file as you add dependencies. Other build tools like Flit, Hatch, and Setuptools also use the `pyproject.toml`.
 You can read more about https://python-poetry.org/docs/pyproject/
-#### What happened to `requirements.txt`?
+#### What happened to requirements.txt?
 When using Poetry, all your dependencies are managed in the `pyproject.toml` file.
 It is possible to use a `requirements.txt` to populate your dependencies in your `pyproject.toml` with Poetry.
 ```shell
