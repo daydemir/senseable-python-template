@@ -20,7 +20,7 @@ There are essentially three ways to publish your code so it can be reused (and p
 
 ## Building a Python package
 
-These instructions will be useful if you intend to release your moodule as a Python package on PyPI.
+These instructions will be useful if you intend to release your module as a Python package on PyPI.
 
 ### How to decide
 

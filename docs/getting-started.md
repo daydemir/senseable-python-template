@@ -15,6 +15,7 @@ Below, we walk through how to quickly set up your new project. This README provi
 - Allows you to choose between using **pip** & **venv** **conda** for dependency and virtual environment management
 - If you plan to deploy a package, **Flit** will be the default tool to use.
 - This set up will be best for those who want to use the more traditional `requirements.txt` file for dependency management, or for users who want more flexibility for more complex projects.
+
 ### *Poetic*
 - Basic setup with a few extra steps to start using **Poetry** for all of dependency management, virtual environment generation, and package publication.
 - This setup may be simpler for those who plan to only use Python code and packages in their project.
@@ -41,6 +42,7 @@ Run `ccds` from the parent directory where you want your project stored
 ccds
 ```
 Begin filling out the template. These can all be changed later.
+
 - Enter the `project_name`
 - Enter the `repo_name`. Choose a name that has not been used for a repository on your GitHub account.
 - Enter the `module_name`. If you choose to export your standalone code, this will be the name of the Python package.
@@ -53,8 +55,10 @@ Begin filling out the template. These can all be changed later.
   - Eventually, we will recommend using the SCL Network Attached Storage (NAS) that is hosted in Cambridge for data storage. See the section **Using the SCL Network Attached Storage (NAS)** below for instructions on how to set up the NAS for data storage. If you will use the SCL NAS, select `none` for `dataset_storage`.
 
 For the remaining choices, refer to the chosen setup flow below.
+
 ## *Standard* Setup
 ### Complete template setup
+
 - Select the `environment_manager` of your choice. Select `none` if you wish to set up an environment manager that is not listed.
 - Select the `dependency_file` of your choice.
 - For `pydata_packages`, select `basic` if you would like the following packages added from the start: ipython, jupyterlab, matplotlib, notebook, numpy, pandas, scikit-learn.

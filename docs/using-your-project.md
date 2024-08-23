@@ -1,4 +1,5 @@
-# Use Your Project
+# Working On Your Project
+
 See the below sections for more information and best practices.
 
 ## Version Control
@@ -27,6 +28,7 @@ In your code editor, be sure to select the local virtual environment you created
 It is recommended that you put the "logic" of your workflow into the module folder created by the template, and reference that module in any scripts or notebooks as needed.
 
 This makes it easier to...
+
 1. Share the core components of your code and eventually publish it as a package
 2. Separate different types of code conceptually
 3. Have someone else come in and review your code
@@ -61,13 +63,13 @@ If a dependency is only used for some extra work that you are doing with your co
 
 *If you do not expect to publish a Python package or share your code with others, this distinction is not very important and you can add all dependencies directly to the whole project using the steps above.*
 
-#### Development dependencies with requirements.txt
+#### Development environment dependencies with requirements.txt
 If you use a `requirements.txt` file for your dependencies, you can create a second `requirements-dev.txt` file to manage development environment dependencies. A quick guide on how to do this can be found [here](https://www.packetcoders.io/pip-trick-for-splitting-dev-requirements/).
 
 #### Development environment dependencies with Conda
 In order to set up different environments and sets of dependencies, see [Managing Environments in Conda](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
 
-#### Development dependencies with Poetry
+#### Development environment dependencies with Poetry
 In **Poetry**, you can use *groups* to manage dependencies for different environments.
 ```shell
 poetry add ipykernel --group dev
