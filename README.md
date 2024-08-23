@@ -1,3 +1,5 @@
+*This README serves as a guide for creating new Python projects at the MIT Senseable City Lab. As the README is quite long, it may be best if this is restructured into a proper documentation website*
+
 # A Senseable Python Template
 
 In order to get started with a new Python project at the MIT Senseable City Lab, it is strongly recommended that [cookiecutter-data-science](https://cookiecutter-data-science.drivendata.org) is used to create the skeleton for your project.
@@ -339,6 +341,16 @@ There are essentially three ways to publish your code so it can be reused (and p
 3. Publish as peer-reviewed software (to [pyOpenSci](https://www.pyopensci.org) or the [Journal of Open Source Software](https://joss.theoj.org))
 
 
+
+## Methods of publishing code
+
+|Tool   |Description   |Supports   |
+|---|---|---|
+|[GitHub](https://github.com)  |Public repository. If structured and documented well, easy to share and reuse code.​  |Supports versioning and tagging releases.  |
+|[Zenodo](https://zenodo.org), [Figshare](https://figshare.com)   |Formal research code archival.​   |Creates DOIs for uploaded code. Zenodo automates this using a GitHub integration.​   |
+|[pyOpenSci](https://www.pyopensci.org)   |Community for open-source Python packages for scientific research.​   |Provides peer review, endorses packages, and promotes community discovery.​   |
+|[Journal of Open Source Software](https://joss.theoj.org)   |Journal for simple publishing of code as a standalone paper. ​   |Indexed by Google Scholar. Software must be non-trivial (multi-month project).​   |
+
 ## Building a Python package
 
 These instructions will be useful if you intend to release your moodule as a Python package on PyPI.
@@ -362,6 +374,8 @@ Every time you want to update the package, you'll need to decide what the versio
 Add a CODE_OF_CONDUCT. [pyOpenSci recommends](https://www.pyopensci.org/python-package-guide/documentation/repository-files/code-of-conduct-file.html#why-you-need-a-code-of-conduct) using the [Contributor Covenant](https://www.contributor-covenant.org/version/2/1/code_of_conduct/).
 
 Add a CHANGELOG, and update it with new releases. More details on good practices at [pyOpenSci](https://www.pyopensci.org/python-package-guide/documentation/repository-files/changelog-file.html#what-does-it-look-like).
+
+Examples of the above can be found in this repository.
 
 
 #### Publishing with Poetry
@@ -401,18 +415,25 @@ git push --tags    #push the tag to GitHub
 After your tag is pushed, you can go to the Tags list on your GitHub, then switch to the Releases list, and create a new Release. Use the tag you just uploaded to create a new release with the same version. It is best practice to describe the changes included in this release in the description.
 
 #### (Optional) Publish on Zenodo
-...
+Follow these instructions to let Zenodo connect to your GitHub repository and automatically create a new DOI everytime you publish a new release version.
 
-### (Pending) Submitting to pyOpenSci or the Journal of Open Source Software
+- Create a Zenodo account (either log in with GitHub, or connect with GitHub after creating the account)
+- ⁠⁠Go to https://zenodo.org/account/settings/github/ and toggle on the repository you want to create the DOI for.
+- ⁠In your GitHub repo, create a Tag to mark your release version (e.g. `v0.1.0`), and then create a Release using that tag.
 
-...
+Now, Zenodo will create a new DOI every time you create a new Release on GitHub. If desired, you can add a badge to the README to link to the latest Zenodo DOI using [these instructions](https://gist.github.com/seignovert/ae6771f400ca464d294261f42900823a).
 
-### More resources on publishing 
-* https://github.com/microsoft/python-package-template/blob/main/README.md
+
+### Consider submitting to pyOpenSci or JOSS
+
+[pyOpenSci](https://www.pyopensci.org)
+
+[Journal of Open Source Software](https://joss.theoj.org)
+
+
+
+### More resources on publishing code
 * https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content
-* https://github.com/kennethreitz/setup.py?tab=readme-ov-file
-* https://github.com/navdeep-G/setup.py
-* https://github.com/navdeep-G/samplemod?tab=readme-ov-file
 * https://figshare.com
 * https://github.com/audreyfeldroy/cookiecutter-pypackage
 * https://the-hitchhikers-guide-to-packaging.readthedocs.io/en/latest/creation.html
