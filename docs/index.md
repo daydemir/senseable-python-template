@@ -1,15 +1,17 @@
-# A Senseable Python Template
+# [DRAFT] A Senseable Python Template
 
 [View on GitHub](https://github.com/daydemir/senseable-python-template)
 
-In order to get started with a new Python project at the MIT Senseable City Lab, it is strongly recommended that the [cookiecutter-data-science](https://cookiecutter-data-science.drivendata.org) template is used to create the skeleton for your project.
+This guide provides recommendations for how to structure our Python projects developed within the MIT Senseable City Lab. The goal of this structure is to make it easy to make the work you do easier to review and reproduce, and the code you write easier to share and publish.
 
-[Cookiecutter](https://cookiecutter.readthedocs.io/en/stable/README.html) is a tool to quickly build out your project structure using a command line utility. There are [many different cookiecutter templates](https://github.com/search?q=cookiecutter&amp%3Btype=Repositories&type=repositories&s=stars&o=desc) that can be used for different project setups with different focuses and strengths. We specifically recommend the template *cookiecutter-data-science* because it is widely adopted for use in research environments and presents an easy-to-share and flexible starting off point. As stated in their documentation:
+This guide strongly recommends that the [cookiecutter-data-science](https://cookiecutter-data-science.drivendata.org) template be used to create the skeleton for your project. Using this template will create an initial project structure that can be shared among projects in the lab, but can also be modified if needed.
+
+This template is implemented using [Cookiecutter](https://cookiecutter.readthedocs.io/en/stable/README.html), a command line utility to quickly build out your project structure. There are [many different cookiecutter templates](https://github.com/search?q=cookiecutter&amp%3Btype=Repositories&type=repositories&s=stars&o=desc) that can be used for different project setups with different focuses and strengths. We specifically recommend the template *cookiecutter-data-science* because it is widely adopted for use in research environments and presents an easy-to-share and flexible starting off point. As stated in their documentation:
 > *A logical, flexible, and reasonably standardized project structure for doing and sharing data science work.*
 
 It is recommended that you read about [the opinions reflected in the template](https://cookiecutter-data-science.drivendata.org/opinions/), and use them to guide your own work and to inform any choice to deviate from the recommended structure.
 
-### The Resulting Directory Structure
+### Resulting Directory Structure
 This is the directory structure that is created after completing the setup with this template.
 ```
 ├── LICENSE            <- Open-source license if one is chosen
