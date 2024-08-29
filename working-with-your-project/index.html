@@ -1,0 +1,796 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../getting-started/">
+      
+      
+        <link rel="next" href="../publish-your-code/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Working On Your Project - A Senseable Python Template</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bcfcd587.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#working-on-your-project" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="A Senseable Python Template" class="md-header__button md-logo" aria-label="A Senseable Python Template" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            A Senseable Python Template
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Working On Your Project
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/daydemir/senseable-python-template/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="A Senseable Python Template" class="md-nav__button md-logo" aria-label="A Senseable Python Template" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    A Senseable Python Template
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/daydemir/senseable-python-template/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Working On Your Project
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Working On Your Project
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#version-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version Control
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make" class="md-nav__link">
+    <span class="md-ellipsis">
+      Make
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtual-environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Virtual Environments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structuring-your-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structuring your code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Structuring your code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jupyter-notebooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jupyter Notebooks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependency-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependency Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dependency Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#development-environment-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Development environment dependencies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Development environment dependencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#development-environment-dependencies-with-requirementstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Development environment dependencies with requirements.txt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#development-environment-dependencies-with-conda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Development environment dependencies with Conda
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#development-environment-dependencies-with-poetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Development environment dependencies with Poetry
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Storage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-scl-network-attached-storage-nas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the SCL Network Attached Storage (NAS)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secret-keys-and-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secret Keys and Tokens
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-scl-bizon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using SCL BIZON
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../publish-your-code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Publish Your Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#version-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version Control
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make" class="md-nav__link">
+    <span class="md-ellipsis">
+      Make
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtual-environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Virtual Environments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structuring-your-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structuring your code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Structuring your code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jupyter-notebooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jupyter Notebooks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependency-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependency Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dependency Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#development-environment-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Development environment dependencies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Development environment dependencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#development-environment-dependencies-with-requirementstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Development environment dependencies with requirements.txt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#development-environment-dependencies-with-conda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Development environment dependencies with Conda
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#development-environment-dependencies-with-poetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Development environment dependencies with Poetry
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Storage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-scl-network-attached-storage-nas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the SCL Network Attached Storage (NAS)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secret-keys-and-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secret Keys and Tokens
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-scl-bizon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using SCL BIZON
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="working-on-your-project">Working On Your Project</h1>
+<p>See the below sections for more information and best practices.</p>
+<h2 id="version-control">Version Control</h2>
+<p>Version control makes it easy to go back to previous versions of your project and create different branches for different lines of work. When connected to a remote repository like GitHub, this makes it so even if your local files are lost or corrupted, you can always retrieve the latest versions from the remote repository.</p>
+<p>If you have not used <strong>git</strong> and GitHub before, you may find it useful to download the <a href="https://desktop.github.com/download/">GitHub Desktop Application</a>. This provides a user interface to easily see what has changed and make commits. Many code editors (like Visual Studio Code) will also have some <strong>git</strong> tools integrated into their interface.</p>
+<p>It is best practice to commit and push your changes to the remote repository frequently. Include messages that are short and that describe the included changes.</p>
+<p>If you would like a crash course on how to use <strong>git</strong>, you may try <a href="https://learngitbranching.js.org">Learn Git Branching</a>.</p>
+<h2 id="make">Make</h2>
+<p>As part of this template, a <code>Makefile</code> is created with some initial scripts, called "recipes", that can be used to simplify set up and reuse of your repository.</p>
+<p>See <a href="https://cookiecutter-data-science.drivendata.org/using-the-template/#make-as-a-task-runner">Make as a task runner</a> for more information.</p>
+<h2 id="virtual-environments">Virtual Environments</h2>
+<p>During the setup, you will have created a virtual environment where your specified version of python and dependencies will be housed to run your python code. The use of virtual environments keeps dependencies and python versions from mixing between different projects, and makes it easier to quickly run someone else's project when needed.</p>
+<p>In your code editor, be sure to select the local virtual environment you created. It will likely be in a folder called <code>.venv</code> located within your project folder.</p>
+<h2 id="structuring-your-code">Structuring your code</h2>
+<p>It is recommended that you put the "logic" of your workflow into the module folder created by the template, and reference that module in any scripts or notebooks as needed.</p>
+<p>This makes it easier to...</p>
+<ol>
+<li>Share the core components of your code and eventually publish it as a package</li>
+<li>Separate different types of code conceptually</li>
+<li>Have someone else come in and review your code</li>
+<li>Publish your code as a package if so desired</li>
+</ol>
+<p>The module folder will be the one with the name you chose at setup and has the <code>__init__.py</code> file inside it. This file is what Python uses to determine that a folder containing Python code should be treated like a module. </p>
+<p>See <a href="https://cookiecutter-data-science.drivendata.org/using-the-template/#refactoring-code-into-shared-modules">Refactoring code into shared modules</a> for more information and how to turn on <code>autoreload</code> so your Jupyter Notebooks always use the up-to-date code from your module.</p>
+<h4 id="jupyter-notebooks">Jupyter Notebooks</h4>
+<p>It is recommended that Jupyter Notebooks be used as a way to explore and visualize the data, and not where the actual data manipulation and "logic" happens. It is reasonable to experiment with more functional changes in your notebooks, but it is recommended that the data manipulation code eventually be moved to the module.</p>
+<p>One way to think about this is: could someone else ignore your notebooks and use only your module code to reproduce your results? If not, then it is useful to refactor your code to make that possible. If you plan to publish your module as a package, this will be necessary.</p>
+<p>In order to access your module code instantly without having to reload your notebook, add a cell to the top of your notebook containing the following code.</p>
+<pre><code class="language-python">%load_ext autoreload
+%autoreload 2
+</code></pre>
+<p>See <a href="https://cookiecutter-data-science.drivendata.org/using-the-template/#open-a-notebook">Open a notebook</a> for more information and guidance on a useful notebook naming convention.</p>
+<h2 id="dependency-management">Dependency Management</h2>
+<p>If the <em>Standard</em> setup was used, you can use the dependency manager of your choice (likely <code>pipx</code> or <code>conda</code>), and the file of your choice as well (likely <code>requirements.txt</code>).
+If the <em>Poetic</em> setup was used, you can add packages using the following command in the command line:</p>
+<pre><code class="language-shell">poetry add numpy
+</code></pre>
+<p>See more details on how to add dependencies with <strong>Poetry</strong> <a href="https://python-poetry.org/docs/cli/#add">here</a>.</p>
+<h3 id="development-environment-dependencies">Development environment dependencies</h3>
+<p>When adding dependencies, it is important to know if the dependency should be added to the whole project, or just to the development environment. </p>
+<p>If a package is being added to the whole project, it should be one that is required for the core module code to run. The easiest way to think about this is to decide, <em>if</em> I were publish the core modujle code in this project as a package, would this dependency need to be bundled in the package? If yes, then add the dependency to the whole project using the standard commands above.</p>
+<p>If a dependency is not required by the core module code and is used for work outside the module or for extra tooling, then you can add that package to your development environment. This makes it so when you are sharing your code or publishing a package, it is clear which packages are required to run your code and extraneous dependencies are not unnecessarily bundled in. Some standard examples of development environment dependencies include <code>ipykernel</code> and <code>notebooks</code> for Jupyter Notebooks, since notebooks would not likely be considered part of a core module to be reused by others.</p>
+<p><em>If you do not expect to publish a Python package or share your code with others, this distinction is not very important and you can add all dependencies directly to the whole project using the steps above.</em></p>
+<h4 id="development-environment-dependencies-with-requirementstxt">Development environment dependencies with requirements.txt</h4>
+<p>If you use a <code>requirements.txt</code> file for your dependencies, you can create a second <code>requirements-dev.txt</code> file to manage development environment dependencies. A quick guide on how to do this can be found <a href="https://www.packetcoders.io/pip-trick-for-splitting-dev-requirements/">here</a>.</p>
+<h4 id="development-environment-dependencies-with-conda">Development environment dependencies with Conda</h4>
+<p>In order to set up different environments and sets of dependencies, see <a href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">Managing Environments in Conda</a>.</p>
+<h4 id="development-environment-dependencies-with-poetry">Development environment dependencies with Poetry</h4>
+<p>With <strong>Poetry</strong>, you can use <em>groups</em> to manage dependencies for different environments.</p>
+<pre><code class="language-shell">poetry add ipykernel --group dev
+</code></pre>
+<p>See <a href="https://python-poetry.org/docs/managing-dependencies/#dependency-groups">Dependency Groups in Poetry</a> for more information.</p>
+<h2 id="data-management">Data Management</h2>
+<p>Generally, it is important to keep your work reproducible. This means that given an initial dataset and your code, it should be possible to recreate all the intermediary steps and data outputs. This makes it possible for someone else to come in later and use your code to reproduce the results you've achieved, and build on top of them. Keeping the raw data that is retrieved form external sources immutable is also important for this reason.</p>
+<p>For this reason, this template uses the following structure within the <code>data</code> folder</p>
+<pre><code>├── data
+│   ├── external       &lt;- Data from third party sources.
+│   ├── interim        &lt;- Intermediate data that has been transformed.
+│   ├── processed      &lt;- The final, canonical data sets for modeling.
+│   └── raw            &lt;- The original, immutable data dump.
+</code></pre>
+<h3 id="data-storage">Data Storage</h3>
+<p>It is preferred that the datasets be stored on the Senseable NAS, or on some form of cloud storage (hence the <code>dataset_storage</code> option at initial set up).
+The <code>data</code> folder is included in the <code>.gitignore</code> file by default, so no files in the data folder will be synced to GitHub. This is generally good practice in order to keep large data files off of GitHub and out of your <strong>git</strong> history. GitHub will reject files over 100MB.</p>
+<p>If you think it is important to include the data files in GitHub, you can modify the <code>.gitignore</code> as needed. If your files are larger than a few MB, it is recommended to use <a href="https://git-lfs.com">git-lfs</a> to keep your git history lean and repo fetching fast. Be mindful that storing the datasets on a public GitHub repository will make the datasets themselves public as well.</p>
+<p>See <a href="https://cookiecutter-data-science.drivendata.org/using-the-template/#add-your-data">Add your data</a> for more information on how to use the data syncing recipes provided with the <code>Makefile</code>.</p>
+<h3 id="using-the-scl-network-attached-storage-nas">Using the SCL Network Attached Storage (NAS)</h3>
+<p>[Pending instructions on connecting your data to the Senseable NAS]</p>
+<h2 id="secret-keys-and-tokens">Secret Keys and Tokens</h2>
+<p>API keys or access tokens you've generated for yourself should be hidden from <strong>git</strong> and not be uploaded to GitHub. If you upload them to a public repo, even if you remove them in a future commit they will be compromised and should be deleted.
+Instead, store them locally in a file that is ignored by <strong>git</strong> and thus will not be uploaded to GitHub. The standard way to do this is to use a <code>.env</code> file in the folder of your project and add your API key. The <code>.env</code> file is already included in the <code>.gitignore</code> of this template, and has already been created by the <em>cookiecutter-data-science</em> template.</p>
+<p>Open the <code>.env</code> file and add your API keys as needed:</p>
+<pre><code class="language-shell">EXAMPLE_API_KEY=&quot;your-secret-api-key-here&quot;
+ANOTHER_API_KEY=&quot;another-super-secret-key-here&quot;
+</code></pre>
+<p>You can use the <code>dotenv</code> package to access your token from your local environment.</p>
+<pre><code class="language-python">import dotenv
+
+dotenv.load_dotenv()
+api_key = os.getenv('EXAMPLE_API_KEY')
+# use api_key wherever you would use your API key normally
+</code></pre>
+<p>If you chose <code>yes</code> on the <code>code_scaffolding</code> option, you should see <code>load_dotenv()</code> being called in the generated <code>config.py</code> file. That would be a good place to retrieve the environment variables to make them available to the rest of your code.</p>
+<h2 id="using-scl-bizon">Using SCL BIZON</h2>
+<p>[Pending instructions for how to connect to and use the SCL BIZON workstation]</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="../search/main.js"></script>
+      
+    
+  </body>
+</html>
