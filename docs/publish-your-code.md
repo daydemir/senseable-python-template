@@ -1,10 +1,10 @@
 # Publish your code
-This template is a starting point for researchers who want to write python code, use Jupyter notebooks, and potentially publish the code they have written for their research.
+The template described in this guide is a starting point for researchers who want to write python code, use Jupyter notebooks, and potentially publish the code they have written for their research.
 
 There are essentially three ways to publish your code so it can be reused (and potentially cited):
 
-1. Publish the code as is in a repository
-2. Publish a Python package to PyPI
+1. Publish the code in a repository as is (with an optional DOI)
+2. Publish a Python package to [PyPI](https://pypi.org)
 3. Publish as peer-reviewed software (to [pyOpenSci](https://www.pyopensci.org) or the [Journal of Open Source Software](https://joss.theoj.org))
 
 
