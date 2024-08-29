@@ -96,24 +96,24 @@ After your tag is pushed, you can go to the Tags list on your GitHub, then switc
 #### Publish on Zenodo
 Follow these instructions to let Zenodo connect to your GitHub repository and automatically create a new DOI everytime you publish a new release version.
 
-- Create a Zenodo account (either log in with GitHub, or connect with GitHub after creating the account)
-- ⁠⁠Go to https://zenodo.org/account/settings/github/ and toggle on the repository you want to create the DOI for.
+- Create a [Zenodo](https://zenodo.org) account (either log in with GitHub, or connect with GitHub after creating the account)
+- ⁠⁠Go to [Zenodo Github Integration](https://zenodo.org/account/settings/github/) and toggle on the repository you want to create the DOI for.
 - ⁠In your GitHub repo, create a Tag to mark your release version (e.g. `v0.1.0`), and then create a Release using that tag.
 
 Now, Zenodo will create a new DOI every time you create a new Release on GitHub. If desired, you can add a badge to the README to link to the latest Zenodo DOI using [these instructions](https://gist.github.com/seignovert/ae6771f400ca464d294261f42900823a).
 
 
-### Consider submitting to pyOpenSci or JOSS
-
-[pyOpenSci](https://www.pyopensci.org)
-
-[Journal of Open Source Software](https://joss.theoj.org)
+More information on using Zenodo (and Figshare) can be found at [GitHub -- Referencing and Citing Content](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content).
 
 
+### Submit to pyOpenSci or JOSS
 
-### More resources on publishing code
-* https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content
-* https://figshare.com
-* https://github.com/audreyfeldroy/cookiecutter-pypackage
-* https://the-hitchhikers-guide-to-packaging.readthedocs.io/en/latest/creation.html
-* https://docs.python-guide.org/writing/structure/
+You may consider submitting your code and package to pyOpenSci or JOSS.
+
+- [pyOpenSci](https://www.pyopensci.org)
+- [Journal of Open Source Software](https://joss.theoj.org)
+
+### More Resources
+
+* [The Hitchhiker's Guide to Packaging -- Creating a Package](https://the-hitchhikers-guide-to-packaging.readthedocs.io/en/latest/creation.html)
+* [The Hitchhiker's Guide to Python -- Structuring Your Project](https://docs.python-guide.org/writing/structure/)
