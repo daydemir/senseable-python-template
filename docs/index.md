@@ -7,9 +7,9 @@
 This guide provides recommendations for how to structure Python projects developed within the MIT Senseable City Lab, and has the following goals in mind:
 
 1. Remove friction to get started with Python projects
-2. Improve internal code reuse and reproducibility
+2. Improve internal code reuse and workflow reproducibility
 3. Centralize access to shared resources
-4. Make it easier to publish code publicly
+4. Make it easier to publish project code publicly
 
 ## Overview
 
