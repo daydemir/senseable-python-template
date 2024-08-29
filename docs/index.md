@@ -2,11 +2,21 @@
 
 [View on GitHub](https://github.com/daydemir/senseable-python-template)
 
-This guide provides recommendations for how to structure our Python projects developed within the MIT Senseable City Lab. The goal of this structure is to make it easy to make the work you do easier to review and reproduce, and the code you write easier to share and publish.
+## Motivation
+
+This guide provides recommendations for how to structure Python projects developed within the MIT Senseable City Lab, and has the following goals in mind:
+
+1. Remove friction to get started with Python projects
+2. Improve internal code reuse and reproducibility
+3. Centralize access to shared resources
+4. Make it easier to publish code publicly
+
+## Overview
 
 This guide strongly recommends that the [cookiecutter-data-science](https://cookiecutter-data-science.drivendata.org) template be used to create the skeleton for your project. Using this template will create an initial project structure that can be shared among projects in the lab, but can also be modified if needed.
 
 This template is implemented using [Cookiecutter](https://cookiecutter.readthedocs.io/en/stable/README.html), a command line utility to quickly build out your project structure. There are [many different cookiecutter templates](https://github.com/search?q=cookiecutter&amp%3Btype=Repositories&type=repositories&s=stars&o=desc) that can be used for different project setups with different focuses and strengths. We specifically recommend the template *cookiecutter-data-science* because it is widely adopted for use in research environments and presents an easy-to-share and flexible starting off point. As stated in their documentation:
+
 > *A logical, flexible, and reasonably standardized project structure for doing and sharing data science work.*
 
 It is recommended that you read about [the opinions reflected in the template](https://cookiecutter-data-science.drivendata.org/opinions/), and use them to guide your own work and to inform any choice to deviate from the recommended structure.
