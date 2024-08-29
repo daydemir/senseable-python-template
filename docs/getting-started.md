@@ -55,7 +55,7 @@ Begin filling out the template prompts. These can all be changed later.
 - Select the `dataset_storage`.
    - For large datasets or CSVs, it is recommended they be stored on a cloud storage if possible. If you have details for those cloud storage providers, go ahead and choose the one you use and provide the credentials.
    - If you do not currently use one of those providers but plan to do so eventually, you can select it now and use the default values for the credentials. This will create the convenient scripts in the `Makefile`, and later when you set up the cloud storage you can modify the details in the `Makefile` to reflect the relevant credentials (bucket name, etc).
-   - Eventually, we will recommend using the SCL Network Attached Storage (NAS) that is hosted in Cambridge for data storage. See the section ][Using the SCL Network Attached Storage (NAS)](using-your-project.md#using-the-scl-network-attached-storage-nas) below for instructions on how to set up the NAS for data storage. If you will use the SCL NAS, select `none` for `dataset_storage`.
+   - Eventually, we will recommend using the SCL Network Attached Storage (NAS) that is hosted in Cambridge for data storage. See the section ][Using the SCL Network Attached Storage (NAS)](working-with-your-project.md#using-the-scl-network-attached-storage-nas) below for instructions on how to set up the NAS for data storage. If you will use the SCL NAS, select `none` for `dataset_storage`.
 
 For the remaining choices, choose a setup flow below to follow.
 
@@ -76,7 +76,7 @@ make create_environment
 ```
 You will then need to activate that environment using the environment manager you've chosen. See [Create a Python virtual environment](https://cookiecutter-data-science.drivendata.org/using-the-template/#create-a-python-virtual-environment) for more information.
 
-You can read more about the Makefile in the [Working On Your Project](using-your-project.md#make) section.
+You can read more about the Makefile in the [Working On Your Project](working-with-your-project.md#make) section.
 
 ## *Poetic* Setup
 ### Complete template setup
@@ -122,9 +122,9 @@ requires = ["flit_core >=3.2,<4"]
 build-backend = "flit_core.buildapi"
 ```
 
-Now you can initialize using **Poetry**. From within the newly created project folder:
+After removing this text from the `pyproject.toml`, you can now initialize using **Poetry**. From within the newly created project folder run the following:
 ```shell
-cd newly-created-project folder 
+cd newly-created-project-folder 
 poetry init
 ```
 You will be guided through set up options, and you should chose the same project name you chose during the original set up.
@@ -137,11 +137,12 @@ poetry config virtualenvs.in-project true
 ```shell
 poetry install
 ```
-This creates a virtual environment that stored in the project folder at `/.venv`. This folder is hidden to git thanks to the `.gitignore` file, so your local environment does not take up storage in GitHub.
+This creates a virtual environment that stored in the project folder at `/.venv`. This folder is hidden to git thanks to the `.gitignore` file.
 
-This makes it so if someone else wants to run your code, they can clone or download your repository from GitHub, and run `poetry install` themselves to have a copy of the virtual environment you are using.
+If someone else wants to run your code, they can clone or download your repository from GitHub, and run `poetry install` themselves to have a copy of the virtual environment you are using.
 
-Let's add the helpers that come with the template to the development environment. More information on this is available in [Working On Your Project](using-your-project.md).
+#### Add included dependencies
+Let's add the helpers that come with the template to the development environment. More information on this is available in [Working On Your Project](working-with-your-project.md#dependency-management).
 ```shell
 poetry add black flake8 isort --group dev
 ```
@@ -154,11 +155,11 @@ poetry add python-dotenv loguru typer tqdm
 
 #### Delete the requirements.txt
 
-In order to avoid confusion, it is recommended that you delete the `requirements.txt` file as it will remain out of date.
+In order to avoid confusion, it is recommended that you delete the `requirements.txt` file as it will not be used.
 
 ### pyproject.toml
-It will be useful to familiarize yourself with the `pyproject.toml` file. This file is the current best practice method for defining project parameters and dependencies. Poetry will populate and use this file as you add dependencies. Other build tools like Flit, Hatch, and Setuptools also use the `pyproject.toml`.
-You can read more about https://python-poetry.org/docs/pyproject/
+It will be useful to familiarize yourself with the `pyproject.toml` file. This file is the current best practice method for defining project parameters and dependencies. Poetry will populate and use this file as you add dependencies. Other build tools like Flit, Hatch, and Setuptools also use the `pyproject.toml`. Read more about `pyproject.toml` at [Python's pyproject documentation](https://python-poetry.org/docs/pyproject/).
+
 #### What happened to requirements.txt?
 When using Poetry, all your dependencies are managed in the `pyproject.toml` file.
 It is possible to use a `requirements.txt` to populate your dependencies in your `pyproject.toml` with Poetry.
@@ -175,7 +176,7 @@ poetry export -f requirements.txt --output requirements.txt --dev
 ```
 
 #### Adjust Makefile
-In fact, in order to get some of our `Makefile` recipes working again, we will add those above lines to the `requirements` recipe. So now the `requirements` recipe in your `Makefile` should look like the following:
+In fact, in order to get some of our `Makefile` recipes working again, we will add those above lines to the `requirements` recipe. So now the `requirements` recipe in your `Makefile` should look like this:
 ```make
 ## Install Python Dependencies
 .PHONY: requirements
@@ -185,7 +186,10 @@ requirements:
 	$(PYTHON_INTERPRETER) -m pip install -U pip
 	$(PYTHON_INTERPRETER) -m pip install -r requirements.txt
 ```
-It is important to not that with this change `make requirements` will create a `requirements.txt` based on your **Poetry** dependencies (both regular and development) based on the `pyproject.toml`, and install those dependencies using **pip**. However, if you are generally using **Poetry** to manage your dependencies, `make requirements` should not be used to install dependencies for development purposes. Instead, the standard `poetry install` should be used.
+
+It is important to note that with this change the `make requirements` recipe will create a `requirements.txt` based on your **Poetry** dependencies (both regular and development) based on the `pyproject.toml`, and install those dependencies using **pip**. However, if you are using **Poetry** to manage your dependencies, `make requirements` should not be used to install dependencies. Instead, the standard `poetry install` should be used.
+
+The Makefile is discussed further in [Working With Your Project](working-with-your-project.md#make).
 
 ## Connect to GitHub
 Whichever setup flow you chose, your final step will be to connect your local folder to a new repo on GitHub.

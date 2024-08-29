@@ -2,7 +2,7 @@ site_name: A Senseable Python Template
 nav:
   - Home: index.md
   - Getting Started: getting-started.md
-  - Working On Your Project: using-your-project.md
+  - Working On Your Project: working-with-your-project.md
   - Publish Your Code: publish-your-code.md
 
 theme: readthedocs

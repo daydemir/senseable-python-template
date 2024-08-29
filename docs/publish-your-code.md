@@ -35,7 +35,7 @@ If you would like to have your package peer-reviewed and its visibility increase
 If you are ready to publish your module as a Python package, make sure that your git working tree is clean by running `git status` and ensuring that you see that there is nothing to commit.
 
 #### Decide on a version
-Every time you want to update the package, you'll need to decide what the version should be of the next package update. It is recommended that version updates adhere to semantic versioning standards. [More on semantic versioning available here](https://devhints.io/semver)
+For every update that you release of your package, you'll need to decide what the version should be of the next package update. Version updates should adhere to semantic versioning standards. [More on semantic versioning available here](https://devhints.io/semver)
 
 #### Prepare release metadata
 Add a CODE_OF_CONDUCT. [pyOpenSci recommends](https://www.pyopensci.org/python-package-guide/documentation/repository-files/code-of-conduct-file.html#why-you-need-a-code-of-conduct) using the [Contributor Covenant](https://www.contributor-covenant.org/version/2/1/code_of_conduct/).
@@ -44,7 +44,7 @@ Add a CHANGELOG, and update it with new releases. More details on good practices
 
 Examples of the above can be found in this repository.
 
-#### Publishing with Flit
+#### Publish with Flit
 
 If you used the *Standard* setup, you will be ready to publish using [Flit](https://flit.pypa.io/en/stable/).
 
@@ -55,18 +55,18 @@ flit build
 flit publish
 ```
 
-Flit will use the `version` set in your `pyproject.toml` as the version for the package deployment.
+Flit with prompt you for your PyPI credentials in order to automatically upload the package. If you have not created an account at [PyPI](https://pypi.org), you will need to do that now. Flit will also use the `version` set in your `pyproject.toml` as the version for the package deployment.
 
-#### Publishing with Poetry
-If you are using Poetry `poetry` handles incrementing the versions for you, you just need to decide if the update is a `patch`, a `minor` update, or a `major` update. Any update that would break for existing users of the package is always considered `major`.
+#### Publish with Poetry
+**Poetry** handles incrementing the versions for you, you just need to decide if the update is a `patch`, a `minor` update, or a `major` update. Any update that would break for existing users of the package is considered `major`.
 
-This template has an initial version of `0.1.0`. You can always see the existing version of the package by checking the `pyproject.toml` file, or by running
+This template has an initial version of `0.1.0`. You can see the existing version of the package by checking the `pyproject.toml` file, or by running
 ```shell
 poetry version
 ```
 
 #### First version
-For the first time you publish a package, you need to create an account at [PyPI] generate an API token on your account. After generating the token, copy it and connect it to `poetry` using the following command
+For the first time you publish a package, you need to create an account at [PyPI](https://pypi.org) generate an API token on your account. After generating the token, copy it and connect it to `poetry` using the following command
 ```shell
 poetry config pypi-token.pypi YOUR-API-TOKEN
 ```
@@ -82,7 +82,7 @@ poetry build                     #creates the artifacts we need for the python p
 poetry publish                   #uploads the package to PyPI
 ```
 
-#### Create a tag and release
+### Create a tag and release
 It is good practice to create a release on GitHub to mark an update to the package. This ensures that you know what code is associated with what package version, and is required if you want to use Zenodo's automatic integration with GitHub.
 
 ```shell
@@ -93,7 +93,7 @@ git push --tags    #push the tag to GitHub
 
 After your tag is pushed, you can go to the Tags list on your GitHub, then switch to the Releases list, and create a new Release. Use the tag you just uploaded to create a new release with the same version. It is best practice to describe the changes included in this release in the description.
 
-#### (Optional) Publish on Zenodo
+#### Publish on Zenodo
 Follow these instructions to let Zenodo connect to your GitHub repository and automatically create a new DOI everytime you publish a new release version.
 
 - Create a Zenodo account (either log in with GitHub, or connect with GitHub after creating the account)
