@@ -35,7 +35,7 @@ If you would like to have your package peer-reviewed and its visibility increase
 If you are ready to publish your module as a Python package, make sure that your git working tree is clean by running `git status` and ensuring that you see that there is nothing to commit.
 
 #### Decide on a version
-For every update that you release of your package, you'll need to decide what the version should be of the next package update. Version updates should adhere to semantic versioning standards. [More on semantic versioning available here](https://devhints.io/semver)
+For every update that you release of your package, you'll need to decide what the version should be. Version updates should adhere to semantic versioning standards. [More on semantic versioning available here](https://devhints.io/semver)
 
 #### Prepare release metadata
 Add a CODE_OF_CONDUCT. [pyOpenSci recommends](https://www.pyopensci.org/python-package-guide/documentation/repository-files/code-of-conduct-file.html#why-you-need-a-code-of-conduct) using the [Contributor Covenant](https://www.contributor-covenant.org/version/2/1/code_of_conduct/).
