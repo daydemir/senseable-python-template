@@ -25,6 +25,8 @@ It is recommended that you read about [the opinions reflected in the template](h
 - Add instructions for how to integrate your work with the SCL BIZON Workstation and NAS
 - Provide some example usage or boilerplate for processing common types of imagery (possibly using libraries like [Zen SVI](https://zensvi.readthedocs.io/en/latest/))
 - Add offboarding instructions for researchers who are leaving the lab
+- Consider adding standards from this discussion: https://www.reddit.com/r/learnpython/comments/1cvzlqx/first_time_publish_a_package_in_pypi/
+- Add references to NUS and TU Delft processes for comparison.
 
 
 ## SCL Repositories
