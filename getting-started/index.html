@@ -1,0 +1,1016 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../working-with-your-project/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Getting Started - A Senseable Python Template</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bcfcd587.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#getting-started" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="A Senseable Python Template" class="md-header__button md-logo" aria-label="A Senseable Python Template" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            A Senseable Python Template
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Getting Started
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/daydemir/senseable-python-template/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="A Senseable Python Template" class="md-nav__button md-logo" aria-label="A Senseable Python Template" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    A Senseable Python Template
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/daydemir/senseable-python-template/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#poetic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Poetic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-ccds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install ccds
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shared-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shared Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#standard-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Standard Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#complete-template-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete template setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-python-virtual-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a Python virtual environment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#poetic-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Poetic Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Poetic Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#complete-template-setup_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete template setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-up-poetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set up Poetry
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Set up Poetry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-poetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Poetry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initialize-poetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initialize Poetry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-in-project-virtual-environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure in-project virtual environments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-to-download-dependencies-and-setup-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install to download dependencies and setup environment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-included-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add included dependencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-the-requirementstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete the requirements.txt
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyprojecttoml" class="md-nav__link">
+    <span class="md-ellipsis">
+      pyproject.toml
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="pyproject.toml">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-happened-to-requirementstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      What happened to requirements.txt?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjust-makefile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adjust Makefile
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connect-to-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connect to GitHub
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../working-with-your-project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working On Your Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../publish-your-code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Publish Your Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#poetic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Poetic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-ccds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install ccds
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shared-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shared Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#standard-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Standard Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#complete-template-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete template setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-python-virtual-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a Python virtual environment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#poetic-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Poetic Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Poetic Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#complete-template-setup_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete template setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-up-poetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set up Poetry
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Set up Poetry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-poetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Poetry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initialize-poetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initialize Poetry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-in-project-virtual-environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure in-project virtual environments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-to-download-dependencies-and-setup-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install to download dependencies and setup environment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-included-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add included dependencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-the-requirementstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete the requirements.txt
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyprojecttoml" class="md-nav__link">
+    <span class="md-ellipsis">
+      pyproject.toml
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="pyproject.toml">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-happened-to-requirementstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      What happened to requirements.txt?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjust-makefile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adjust Makefile
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connect-to-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connect to GitHub
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="getting-started">Getting Started</h1>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>In order to get started, you'll need the following:</p>
+<ol>
+<li>A basic understanding of <strong>git</strong> and a GitHub account.</li>
+<li>A command line interface to run commands (often Terminal on macOS and Linux, and Command Prompt or PowerShell on Windows).</li>
+<li>An installation of <strong>pipx</strong> or <strong>pip</strong>.</li>
+</ol>
+<h2 id="setup">Setup</h2>
+<p>Below, we walk through how to quickly set up your new project. This README provides two different setup flows for different expertise and preference profiles. If you would prefer, you are welcome to deviate from these setup flows and make choices as you see fit. More details can be found in <a href="https://cookiecutter-data-science.drivendata.org">the documentation for the cookiecutter-data-science template</a>.</p>
+<h3 id="standard"><em>Standard</em></h3>
+<ul>
+<li>Allows you to choose between using <strong>pip</strong> &amp; <strong>venv</strong>, or <strong>conda</strong> for dependency and virtual environment management</li>
+<li>If you plan to deploy a package, <strong>Flit</strong> will be the default tool to use.</li>
+<li>This set up will be best for those who want to use the more traditional <code>requirements.txt</code> file for dependency management, or for users who want more flexibility for more complex projects.</li>
+</ul>
+<h3 id="poetic"><em>Poetic</em></h3>
+<ul>
+<li>Basic setup with a few extra steps to start using <strong>Poetry</strong> for all of dependency management, virtual environment generation, and package publication.</li>
+<li>This setup may be better suited for those who plan to only use Python code and packages in their project.</li>
+<li>The downside of this set up is that sharing code with other users takes an extra step if they do not have (and do not want to use) <strong>Poetry</strong> for dependency management.</li>
+</ul>
+<p>While <strong>Poetry</strong> can also be used for projects set up with the <em>Standard</em> installation as well, the <em>Poetic</em> set up best takes advantage of the unification that <em>Poetry</em> provides.</p>
+<h3 id="install-ccds">Install <code>ccds</code></h3>
+<p>The <code>cookiecutter-data-science</code> template team created a command line tool called <code>ccds</code> to run the setup.</p>
+<p>With pipx (recommended)</p>
+<pre><code class="language-shell">pipx install cookiecutter-data-science
+</code></pre>
+<p>With pip</p>
+<pre><code class="language-shell">pip install cookiecutter-data-science
+</code></pre>
+<h2 id="shared-setup">Shared Setup</h2>
+<p>Run <code>ccds</code> from the parent directory where you want your project stored</p>
+<pre><code class="language-shell"># From the parent directory where you want your project
+ccds
+</code></pre>
+<p>Begin filling out the template prompts. These can all be changed later.</p>
+<ul>
+<li>Enter the <code>project_name</code></li>
+<li>Enter the <code>repo_name</code>. Choose a name that has not been used for a repository on your GitHub account.</li>
+<li>Enter the <code>module_name</code>. If you choose to export your standalone code, this will be the name of the Python package.</li>
+<li>Enter the <code>author_name</code>. This can be your full name.</li>
+<li>Enter the <code>description</code>.</li>
+<li>Enter the <code>python_version_number</code>. As of mid-2024, using a version &gt;=3.9 is recommended.</li>
+<li>Select the <code>dataset_storage</code>.</li>
+<li>For large datasets or CSVs, it is recommended they be stored on a cloud storage if possible. If you have details for those cloud storage providers, go ahead and choose the one you use and provide the credentials.</li>
+<li>If you do not currently use one of those providers but plan to do so eventually, you can select it now and use the default values for the credentials. This will create the convenient scripts in the <code>Makefile</code>, and later when you set up the cloud storage you can modify the details in the <code>Makefile</code> to reflect the relevant credentials (bucket name, etc).</li>
+<li>Eventually, we will recommend using the SCL Network Attached Storage (NAS) that is hosted in Cambridge for data storage. See the section ]<a href="../working-with-your-project/#using-the-scl-network-attached-storage-nas">Using the SCL Network Attached Storage (NAS)</a> below for instructions on how to set up the NAS for data storage. If you will use the SCL NAS, select <code>none</code> for <code>dataset_storage</code>.</li>
+</ul>
+<p>For the remaining choices, choose a setup flow below to follow.</p>
+<h2 id="standard-setup"><em>Standard</em> Setup</h2>
+<h3 id="complete-template-setup">Complete template setup</h3>
+<ul>
+<li>Select the <code>environment_manager</code> of your choice. Select <code>none</code> if you wish to set up an environment manager that is not listed.</li>
+<li>Select the <code>dependency_file</code> of your choice.</li>
+<li>For <code>pydata_packages</code>, select <code>basic</code> if you would like the following packages added from the start: ipython, jupyterlab, matplotlib, notebook, numpy, pandas, scikit-learn.</li>
+<li>Select <code>open_source_license</code>. <code>MIT</code> is recommended if the repository will be public.</li>
+<li>Select <code>docs</code>. If you would prefer to use <a href="https://about.readthedocs.com">Read the Docs</a> instead, you can select <code>none</code> and set that up independently.</li>
+<li>Select <code>code_scaffold</code>. It is recommended to select <code>yes</code> to include some useful boilerplate code. If you are an experienced Python developer, you may prefer to avoid the prebuilt boilerplate and select <code>no</code>.</li>
+</ul>
+<h3 id="create-a-python-virtual-environment">Create a Python virtual environment</h3>
+<p>If you used the <em>Standard</em> setup, you can use the following command to create a new environment using a recipe provided by the template in the Makefile:</p>
+<pre><code class="language-shell">make create_environment
+</code></pre>
+<p>You will then need to activate that environment using the environment manager you've chosen. See <a href="https://cookiecutter-data-science.drivendata.org/using-the-template/#create-a-python-virtual-environment">Create a Python virtual environment</a> for more information.</p>
+<p>You can read more about the Makefile in the <a href="../working-with-your-project/#make">Working On Your Project</a> section.</p>
+<h2 id="poetic-setup"><em>Poetic</em> Setup</h2>
+<h3 id="complete-template-setup_1">Complete template setup</h3>
+<ul>
+<li>For <code>environment_manager</code>, select <code>none</code>.</li>
+<li>For <code>dependency_file</code>, select <code>requirements.txt</code>. At the end of the setup, we will remove this and use <code>pyproject.toml</code> instead.</li>
+<li>For <code>pydata_packages</code>, select <code>none</code>.</li>
+<li>Select <code>open_source_license</code>. <code>MIT</code> is recommended if the repository will be public.</li>
+<li>Select <code>docs</code>. If you would prefer to use <a href="https://about.readthedocs.com">Read the Docs</a> instead, you can select <code>none</code> and set that up independently.</li>
+<li>Select <code>code_scaffold</code>. It is recommended to select <code>yes</code> to include some useful boilerplate code. If you are an experienced Python developer, you may prefer to avoid the prebuilt boilerplate and select <code>no</code>.</li>
+</ul>
+<h3 id="set-up-poetry">Set up Poetry</h3>
+<p>In the <em>Poetic</em> setup flow, we will manage dependencies using <a href="https://python-poetry.org">Poetry</a>. With <strong>Poetry</strong>, you only need one tool to cover the following: manage dependencies, create local environments, and publish your package to PyPI.</p>
+<h4 id="install-poetry">Install Poetry</h4>
+<p>Simple installation with <code>pipx</code></p>
+<pre><code class="language-shell">pipx install poetry
+</code></pre>
+<p>See detailed instructions <a href="https://python-poetry.org/docs/#installation">here</a>.</p>
+<h4 id="initialize-poetry">Initialize Poetry</h4>
+<p>The <em>cookiecutter-data-science</em> template created a <code>pyproject.toml</code> for us already, but we will want to delete a couple sections from that before initiaalizing <strong>Poetry</strong>.</p>
+<p>First, delete the sections within the <code>pyproject.toml</code> for <code>[project]</code> and <code>[build-system]</code>. They will probably look something like this:</p>
+<pre><code class="language-toml">[project]
+name = &quot;your-project-name&quot;
+version = &quot;0.0.1&quot;
+description = &quot;the description for your project&quot;
+authors = [
+  { name = &quot;Deniz Aydemir&quot; },
+]
+license = { file = &quot;LICENSE&quot; }
+readme = &quot;README.md&quot;
+classifiers = [
+    &quot;Programming Language :: Python :: 3&quot;,
+    &quot;License :: OSI Approved :: MIT License&quot;
+]
+requires-python = &quot;~=3.12&quot;
+
+[build-system]
+requires = [&quot;flit_core &gt;=3.2,&lt;4&quot;]
+build-backend = &quot;flit_core.buildapi&quot;
+</code></pre>
+<p>After removing this text from the <code>pyproject.toml</code>, you can now initialize using <strong>Poetry</strong>. From within the newly created project folder run the following:</p>
+<pre><code class="language-shell">cd newly-created-project-folder 
+poetry init
+</code></pre>
+<p>You will be guided through set up options, and you should chose the same project name you chose during the original set up.</p>
+<h4 id="configure-in-project-virtual-environments">Configure in-project virtual environments</h4>
+<pre><code class="language-shell">poetry config virtualenvs.in-project true
+</code></pre>
+<h4 id="install-to-download-dependencies-and-setup-environment">Install to download dependencies and setup environment</h4>
+<pre><code class="language-shell">poetry install
+</code></pre>
+<p>This creates a virtual environment that stored in the project folder at <code>/.venv</code>. This folder is hidden to git thanks to the <code>.gitignore</code> file.</p>
+<p>If someone else wants to run your code, they can clone or download your repository from GitHub, and run <code>poetry install</code> themselves to have a copy of the virtual environment you are using.</p>
+<h4 id="add-included-dependencies">Add included dependencies</h4>
+<p>Let's add the helpers that come with the template to the development environment. More information on this is available in <a href="../working-with-your-project/#dependency-management">Working On Your Project</a>.</p>
+<pre><code class="language-shell">poetry add black flake8 isort --group dev
+</code></pre>
+<p>If you chose <code>yes</code> for the <code>code_scaffolding</code> option, then run the following command to add the packages included in the boilerplate code to the whole project.</p>
+<pre><code class="language-shell">poetry add python-dotenv loguru typer tqdm
+</code></pre>
+<h4 id="delete-the-requirementstxt">Delete the requirements.txt</h4>
+<p>In order to avoid confusion, it is recommended that you delete the <code>requirements.txt</code> file as it will not be used.</p>
+<h3 id="pyprojecttoml">pyproject.toml</h3>
+<p>It will be useful to familiarize yourself with the <code>pyproject.toml</code> file. This file is the current best practice method for defining project parameters and dependencies. Poetry will populate and use this file as you add dependencies. Other build tools like Flit, Hatch, and Setuptools also use the <code>pyproject.toml</code>. Read more about <code>pyproject.toml</code> at <a href="https://python-poetry.org/docs/pyproject/">Python's pyproject documentation</a>.</p>
+<h4 id="what-happened-to-requirementstxt">What happened to requirements.txt?</h4>
+<p>When using Poetry, all your dependencies are managed in the <code>pyproject.toml</code> file.
+It is possible to use a <code>requirements.txt</code> to populate your dependencies in your <code>pyproject.toml</code> with Poetry.</p>
+<pre><code class="language-shell">poetry add $(cat requirements.txt)
+</code></pre>
+<p>Similarly, it is possible to export your dependencies from the <code>pyproject.toml</code> to a <code>requirements.txt</code> if needed.</p>
+<pre><code class="language-shell"># Export dependencies to requirements.txt
+poetry export -f requirements.txt --output requirements.txt
+
+# If you want to include development dependencies as well
+poetry export -f requirements.txt --output requirements.txt --dev
+</code></pre>
+<h4 id="adjust-makefile">Adjust Makefile</h4>
+<p>In fact, in order to get some of our <code>Makefile</code> recipes working again, we will add those above lines to the <code>requirements</code> recipe. So now the <code>requirements</code> recipe in your <code>Makefile</code> should look like this:</p>
+<pre><code class="language-make">## Install Python Dependencies
+.PHONY: requirements
+requirements:
+    poetry export -f requirements.txt --output requirements.txt
+    poetry export -f requirements.txt --output requirements.txt --dev
+    $(PYTHON_INTERPRETER) -m pip install -U pip
+    $(PYTHON_INTERPRETER) -m pip install -r requirements.txt
+</code></pre>
+<p>It is important to note that with this change the <code>make requirements</code> recipe will create a <code>requirements.txt</code> based on your <strong>Poetry</strong> dependencies (both regular and development) based on the <code>pyproject.toml</code>, and install those dependencies using <strong>pip</strong>. However, if you are using <strong>Poetry</strong> to manage your dependencies, <code>make requirements</code> should not be used to install dependencies. Instead, the standard <code>poetry install</code> should be used.</p>
+<p>The Makefile is discussed further in <a href="../working-with-your-project/#make">Working With Your Project</a>.</p>
+<h2 id="connect-to-github">Connect to GitHub</h2>
+<p>Whichever setup flow you chose, your final step will be to connect your local folder to a new repo on GitHub.</p>
+<p>In order to complete this step, ensure you have the <a href="https://cli.github.com">GitHub command-line interface (CLI)</a> installed. Then you can run the following commands to connect your local repository to GitHub.</p>
+<pre><code class="language-shell"># Navigate to your newly created project folder
+cd newly-created-project-folder
+
+git init                        
+git add .                       
+git commit -m &quot;CCDS defaults&quot;   
+
+# Use GitHub CLI to create a new repo on your account. This will prompt you for further details.
+gh repo create
+</code></pre>
+<p>Your project is now ready to go!</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="../search/main.js"></script>
+      
+    
+  </body>
+</html>

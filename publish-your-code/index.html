@@ -1,0 +1,784 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../working-with-your-project/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Publish Your Code - A Senseable Python Template</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bcfcd587.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#publish-your-code" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="A Senseable Python Template" class="md-header__button md-logo" aria-label="A Senseable Python Template" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            A Senseable Python Template
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Publish Your Code
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/daydemir/senseable-python-template/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="A Senseable Python Template" class="md-nav__button md-logo" aria-label="A Senseable Python Template" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    A Senseable Python Template
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/daydemir/senseable-python-template/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../working-with-your-project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working On Your Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Publish Your Code
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Publish Your Code
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#code-publishing-and-archiving-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code Publishing and Archiving Tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-a-python-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building a Python package
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building a Python package">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-decide" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to decide
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publishing-the-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publishing the package
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Publishing the package">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decide-on-a-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decide on a version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prepare-release-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prepare release metadata
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publish-with-flit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publish with Flit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publish-with-poetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publish with Poetry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#first-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      First version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-all-releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      For all releases
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-tag-and-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a tag and release
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create a tag and release">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#publish-on-zenodo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publish on Zenodo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submit-to-pyopensci-or-joss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Submit to pyOpenSci or JOSS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      More Resources
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#code-publishing-and-archiving-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code Publishing and Archiving Tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-a-python-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building a Python package
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building a Python package">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-decide" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to decide
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publishing-the-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publishing the package
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Publishing the package">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decide-on-a-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decide on a version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prepare-release-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prepare release metadata
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publish-with-flit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publish with Flit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publish-with-poetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publish with Poetry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#first-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      First version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-all-releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      For all releases
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-tag-and-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a tag and release
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create a tag and release">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#publish-on-zenodo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publish on Zenodo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submit-to-pyopensci-or-joss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Submit to pyOpenSci or JOSS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      More Resources
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="publish-your-code">Publish your code</h1>
+<p>The template described in this guide is a starting point for researchers who want to write python code, use Jupyter notebooks, and potentially publish the code they have written for their research.</p>
+<p>There are essentially three ways to publish your code so it can be reused (and potentially cited):</p>
+<ol>
+<li>Publish the code in a repository as is (with an optional DOI)</li>
+<li>Publish a Python package to <a href="https://pypi.org">PyPI</a></li>
+<li>Publish as peer-reviewed software (to <a href="https://www.pyopensci.org">pyOpenSci</a> or the <a href="https://joss.theoj.org">Journal of Open Source Software</a>)</li>
+</ol>
+<h2 id="code-publishing-and-archiving-tools">Code Publishing and Archiving Tools</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Description</th>
+<th>Supports</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com">GitHub</a></td>
+<td>Public repository. If structured and documented well, easy to share and reuse code.​</td>
+<td>Supports versioning and tagging releases.</td>
+</tr>
+<tr>
+<td><a href="https://zenodo.org">Zenodo</a>, <a href="https://figshare.com">Figshare</a></td>
+<td>Formal research code archival.​</td>
+<td>Creates DOIs for uploaded code. Zenodo automates this using a GitHub integration.​</td>
+</tr>
+<tr>
+<td><a href="https://www.pyopensci.org">pyOpenSci</a></td>
+<td>Community for open-source Python packages for scientific research.​</td>
+<td>Provides peer review, endorses packages, and promotes community discovery.​</td>
+</tr>
+<tr>
+<td><a href="https://joss.theoj.org">Journal of Open Source Software</a></td>
+<td>Journal for simple publishing of code as a standalone paper. ​</td>
+<td>Indexed by Google Scholar. Software must be non-trivial (multi-month project).​</td>
+</tr>
+</tbody>
+</table>
+<h2 id="building-a-python-package">Building a Python package</h2>
+<p>These instructions will be useful if you intend to release your module as a Python package on PyPI.</p>
+<h3 id="how-to-decide">How to decide</h3>
+<p>Would this module be useful to other researchers or developers? Releasing the reusable elements of your code as a package on PyPI makes it easy for others to use, and to have a formal way of releasing improvements over time. See more on python packages <a href="https://www.pyopensci.org/python-package-guide/tutorials/intro.html">here</a>.</p>
+<p>If you add your repo to Zenodo, then you will have a unique DOI (separate from the DOI of any papers you've published) that can be cited by others when they use your library.</p>
+<p>If you would like to have your package peer-reviewed and its visibility increased, you can consider submitting to <a href="https://www.pyopensci.org">pyOpenSci</a> or the <a href="https://joss.theoj.org">Journal of Open Source Software</a>. pyOpenSci is a peer-review process that increases the visibility among the scientific community. The Journal of Open Source Software requires that the software be non-trivial by checking number of lines of code and the amount of time it took to write the software. More details on the submission requirements for the JOSS <a href="https://joss.readthedocs.io/en/latest/submitting.html">here</a>.</p>
+<h3 id="publishing-the-package">Publishing the package</h3>
+<p>If you are ready to publish your module as a Python package, make sure that your git working tree is clean by running <code>git status</code> and ensuring that you see that there is nothing to commit.</p>
+<h4 id="decide-on-a-version">Decide on a version</h4>
+<p>For every update that you release of your package, you'll need to decide what the version should be. Version updates should adhere to semantic versioning standards. <a href="https://devhints.io/semver">More on semantic versioning available here</a></p>
+<h4 id="prepare-release-metadata">Prepare release metadata</h4>
+<p>Add a CODE_OF_CONDUCT. <a href="https://www.pyopensci.org/python-package-guide/documentation/repository-files/code-of-conduct-file.html#why-you-need-a-code-of-conduct">pyOpenSci recommends</a> using the <a href="https://www.contributor-covenant.org/version/2/1/code_of_conduct/">Contributor Covenant</a>.</p>
+<p>Add a CHANGELOG, and update it with new releases. More details on good practices at <a href="https://www.pyopensci.org/python-package-guide/documentation/repository-files/changelog-file.html#what-does-it-look-like">pyOpenSci</a>.</p>
+<p>Examples of the above can be found in this repository.</p>
+<h4 id="publish-with-flit">Publish with Flit</h4>
+<p>If you used the <em>Standard</em> setup, you will be ready to publish using <a href="https://flit.pypa.io/en/stable/">Flit</a>.</p>
+<p>Once Flit is installed, you should be ready to build and publish your package code. </p>
+<pre><code class="language-Shell">flit build
+flit publish
+</code></pre>
+<p>Flit with prompt you for your PyPI credentials in order to automatically upload the package. If you have not created an account at <a href="https://pypi.org">PyPI</a>, you will need to do that now. Flit will also use the <code>version</code> set in your <code>pyproject.toml</code> as the version for the package deployment.</p>
+<h4 id="publish-with-poetry">Publish with Poetry</h4>
+<p><strong>Poetry</strong> handles incrementing the versions for you, you just need to decide if the update is a <code>patch</code>, a <code>minor</code> update, or a <code>major</code> update. Any update that would break for existing users of the package is considered <code>major</code>.</p>
+<p>This template has an initial version of <code>0.1.0</code>. You can see the existing version of the package by checking the <code>pyproject.toml</code> file, or by running</p>
+<pre><code class="language-shell">poetry version
+</code></pre>
+<h4 id="first-version">First version</h4>
+<p>For the first time you publish a package, you need to create an account at <a href="https://pypi.org">PyPI</a> generate an API token on your account. After generating the token, copy it and connect it to <code>poetry</code> using the following command</p>
+<pre><code class="language-shell">poetry config pypi-token.pypi YOUR-API-TOKEN
+</code></pre>
+<h4 id="for-all-releases">For all releases</h4>
+<p>Run the following commands to publish a new <code>major</code> update to your package.</p>
+<pre><code class="language-shell">poetry version major             #if our current version is 0.1.0, this bumps the package version to 1.0.0
+git commit -am 'version bump'    #commit the version update to git
+git push                         #push the updated version to GitHub 
+poetry build                     #creates the artifacts we need for the python package
+poetry publish                   #uploads the package to PyPI
+</code></pre>
+<h3 id="create-a-tag-and-release">Create a tag and release</h3>
+<p>It is good practice to create a release on GitHub to mark an update to the package. This ensures that you know what code is associated with what package version, and is required if you want to use Zenodo's automatic integration with GitHub.</p>
+<pre><code class="language-shell">poetry version     #prints the current version, say 1.0.0
+git tag v1.0.0     #standard practice is to prefix version tags with `v`
+git push --tags    #push the tag to GitHub
+</code></pre>
+<p>After your tag is pushed, you can go to the Tags list on your GitHub, then switch to the Releases list, and create a new Release. Use the tag you just uploaded to create a new release with the same version. It is best practice to describe the changes included in this release in the description.</p>
+<h4 id="publish-on-zenodo">Publish on Zenodo</h4>
+<p>Follow these instructions to let Zenodo connect to your GitHub repository and automatically create a new DOI everytime you publish a new release version.</p>
+<ul>
+<li>Create a <a href="https://zenodo.org">Zenodo</a> account (either log in with GitHub, or connect with GitHub after creating the account)</li>
+<li>⁠⁠Go to <a href="https://zenodo.org/account/settings/github/">Zenodo Github Integration</a> and toggle on the repository you want to create the DOI for.</li>
+<li>⁠In your GitHub repo, create a Tag to mark your release version (e.g. <code>v0.1.0</code>), and then create a Release using that tag.</li>
+</ul>
+<p>Now, Zenodo will create a new DOI every time you create a new Release on GitHub. If desired, you can add a badge to the README to link to the latest Zenodo DOI using <a href="https://gist.github.com/seignovert/ae6771f400ca464d294261f42900823a">these instructions</a>.</p>
+<p>More information on using Zenodo (and Figshare) can be found at <a href="https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content">GitHub -- Referencing and Citing Content</a>.</p>
+<h3 id="submit-to-pyopensci-or-joss">Submit to pyOpenSci or JOSS</h3>
+<p>You may consider submitting your code and package to pyOpenSci or JOSS.</p>
+<ul>
+<li><a href="https://www.pyopensci.org">pyOpenSci</a></li>
+<li><a href="https://joss.theoj.org">Journal of Open Source Software</a></li>
+</ul>
+<h3 id="more-resources">More Resources</h3>
+<ul>
+<li><a href="https://the-hitchhikers-guide-to-packaging.readthedocs.io/en/latest/creation.html">The Hitchhiker's Guide to Packaging -- Creating a Package</a></li>
+<li><a href="https://docs.python-guide.org/writing/structure/">The Hitchhiker's Guide to Python -- Structuring Your Project</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="../search/main.js"></script>
+      
+    
+  </body>
+</html>
