@@ -27,6 +27,7 @@ It is recommended that you read about [the opinions reflected in the template](h
 - Add offboarding instructions for researchers who are leaving the lab
 - Consider adding standards from this discussion: https://www.reddit.com/r/learnpython/comments/1cvzlqx/first_time_publish_a_package_in_pypi/
 - Add references to NUS and TU Delft processes for comparison.
+- Guidance for how to use LLM assisted coding tools like Cursor and Windsurf
 
 
 ## SCL Repositories
